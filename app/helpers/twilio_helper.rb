@@ -1,7 +1,7 @@
 module TwilioHelper
     def parse_sms(sms)
 
-        body = sms[:Body]&.upcase
+        body = sms[:Body]&.strip&.upcase
         from = sms[:From]
 
         case body

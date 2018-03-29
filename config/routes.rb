@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'twilio/sms'
+  post 'twilio/sms'
 
   resources :cat_facts, only: [:create, :index]
 

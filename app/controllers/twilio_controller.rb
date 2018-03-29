@@ -1,4 +1,6 @@
 class TwilioController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  
   def sms
     body = helpers.parse_sms(params)
     response = Twilio::TwiML::MessagingResponse.new do |r|
